@@ -31,8 +31,9 @@
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.ImdUrl)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ImdUrl)
+        <dd class="col-sm-10">
+            @*@Html.DisplayFor(modelItem => item.ImdUrl)*@
+            <a href=@Model.ImdUrl target="_blank">@Model.Title</a>
         </dd>
     </dl>
 </div>
