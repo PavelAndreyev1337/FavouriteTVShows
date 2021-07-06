@@ -25,5 +25,9 @@ namespace FavouriteTVShows.Models
         [Display(Name ="Imdb Link")]
         public string ImdUrl { get; set; }
 
+        [Required]
+        [DataType(DataType.ImageUrl)]
+        [Display(Name = "Poster")]
+        public string ImageUrl { get; set; }
     }
 }
