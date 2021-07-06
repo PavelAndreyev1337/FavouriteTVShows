@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace FavouriteTVShows.Models
 {
@@ -9,12 +10,19 @@ namespace FavouriteTVShows.Models
     {
         public int Id { get; set; }
 
+        [Required]
+        [StringLength(60, MinimumLength = 3)]
         public string Title { get; set; }
 
+        [Required]
         public Genre Genre { get; set; }
 
+        [Required]
         public decimal Rating { get; set; }
 
+        [Required]
+        [DataType(DataType.Url)]
+        [Display(Name ="Imdb Link")]
         public string ImdUrl { get; set; }
 
     }
