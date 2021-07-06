@@ -18,6 +18,7 @@ namespace FavouriteTVShows.Models
         public Genre Genre { get; set; }
 
         [Required]
+        [DisplayFormat(DataFormatString = "{0:0.0#}")]
         public decimal Rating { get; set; }
 
         [Required]
