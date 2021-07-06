@@ -54,7 +54,7 @@ namespace FavouriteTVShows.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Genre,Rating,ImdUrl")] TvShow tvShow)
+        public async Task<IActionResult> Create([Bind("Id,Title,Genre,Rating,ImdUrl,ImageUrl")] TvShow tvShow)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace FavouriteTVShows.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Genre,Rating,ImdUrl")] TvShow tvShow)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Genre,Rating,ImdUrl,ImageUrl")] TvShow tvShow)
         {
             if (id != tvShow.Id)
             {
